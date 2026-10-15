@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en-NZ">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Equal Is Not Enough</title>
+<meta name="description" content="There is no life sentence for raping a child in New Zealand. The maximum is 20 years. A petition to Parliament to change that. Sign it.">
+<meta property="og:title" content="Equal Is Not Enough. Protect our tamariki.">
+<meta property="og:description" content="There is no life sentence for raping a child in New Zealand. The maximum is 20 years. Sign the petition.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://equalisnotenough.nz/">
+<meta name="theme-color" content="#0D0D0D">
+<meta name="color-scheme" content="dark">
+<style>
+  :root{--ink:#0D0D0D;--paper:#FAF9F7;--red:#E03A2E;--mute:rgba(250,249,247,.72);--line:rgba(250,249,247,.16)}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  html,body{background:var(--ink);color:var(--paper);font-family:"Aeonik","Helvetica Neue",Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.3}
+  .wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 20px}
+  @media(min-width:760px){.wrap{padding:0 40px}}
+  .k{font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
+  .k b{color:var(--red);font-weight:700}
+  h1,h2{font-weight:700;text-transform:uppercase;line-height:.94;letter-spacing:-.02em;text-wrap:balance}
+  h1 em,h2 em{font-style:normal;color:var(--red)}
+  .btn{display:inline-flex;align-items:center;gap:16px;background:var(--red);color:var(--paper);text-decoration:none;font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:clamp(15px,1.8vw,19px);padding:20px 26px;border-radius:2px;border:0;cursor:pointer;font-family:inherit}
+  .btn:hover{background:#c9352b}
+  .btn.ink{background:var(--ink);color:var(--paper)}
+  .btn.ink:hover{background:#262626}
+  .btn svg{flex:none}
+  a.link{color:var(--paper);text-decoration:none;border-bottom:2px solid var(--red);padding-bottom:2px;font-weight:600}
+  a.link:hover{color:var(--red)}
+  .merch{display:none}
+  section{position:relative;overflow:hidden}
+  .pat{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.28;z-index:0}
+  .veil{position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,13,13,.94) 0%,rgba(13,13,13,.72) 65%,rgba(13,13,13,.5));z-index:0}
+  .in{position:relative;z-index:1}
+
+  /* hero */
+  header{position:absolute;top:0;left:0;right:0;z-index:2;padding:26px 0}
+  header .wrap{display:flex;justify-content:space-between;align-items:flex-start}
+  .mark{display:inline-flex;flex-direction:column;font-weight:700;line-height:.95;letter-spacing:-.01em;font-size:clamp(20px,2.6vw,26px);text-transform:uppercase;color:var(--paper);text-decoration:none}
+  .mark span:nth-child(2){color:var(--red)}
+  .hero{min-height:100svh;display:flex;align-items:center;padding:140px 0 80px}
+  .hero .pat{background-image:url("maze.jpg")}
+  .hero h1{font-size:clamp(60px,12.5vw,168px);max-width:12ch}
+  .hero .lead{margin-top:30px;font-size:clamp(18px,2.4vw,26px);max-width:34ch;font-weight:500;color:rgba(250,249,247,.92)}
+  .hero .cta{margin-top:40px;display:flex;flex-wrap:wrap;gap:16px 26px;align-items:center}
+  .count{margin-top:34px;font-size:15px;color:var(--mute)}
+  .count b{color:var(--paper);font-size:20px;font-weight:700;letter-spacing:-.01em}
+
+  /* grid */
+  .goal{padding:110px 0}
+  .goal h2{font-size:clamp(44px,8vw,112px)}
+  .grid{display:grid;grid-template-columns:repeat(40,1fr);gap:3px;margin-top:48px}
+  @media(max-width:600px){.grid{grid-template-columns:repeat(25,1fr);gap:2px}}
+  .grid i{display:block;aspect-ratio:1;border:1px solid var(--line);transition:background .25s ease, border-color .25s ease}
+  .grid i.on{background:var(--paper);border-color:var(--paper)}
+  .goal .sub{margin-top:30px;font-size:clamp(17px,2vw,22px);max-width:46ch;color:rgba(250,249,247,.9)}
+  .goal .sub b{color:var(--red)}
+
+  /* ask */
+  .ask{background:var(--red);color:var(--paper);padding:110px 0}
+  .ask .band{position:absolute;inset:0;background:url("maze.jpg") center/cover;mix-blend-mode:screen;opacity:.16;z-index:0}
+  .ask .k{color:rgba(250,249,247,.85)}.ask .k b{color:var(--ink)}
+  .ask h2{font-size:clamp(34px,5.6vw,76px);max-width:22ch}
+  .ask h2 em{color:var(--ink)}
+  .ask .cols{display:grid;gap:34px 48px;margin-top:44px}
+  @media(min-width:800px){.ask .cols{grid-template-columns:1.1fr 1fr}}
+  .ask p{font-size:clamp(17px,1.9vw,21px);line-height:1.4;max-width:52ch}
+  .ask p+p{margin-top:16px}
+  .ask .req{background:var(--ink);color:var(--paper);padding:28px;border-radius:2px;font-size:clamp(16px,1.7vw,19px);line-height:1.45}
+  .ask .req .k{color:var(--mute);margin-bottom:14px}
+
+  /* facts */
+  .facts{padding:110px 0}
+  .facts .pat{background-image:url("maze.jpg")}
+  .facts h2{font-size:clamp(36px,6vw,84px)}
+  .tiles{display:grid;gap:14px;margin-top:44px}
+  @media(min-width:760px){.tiles{grid-template-columns:repeat(3,1fr)}}
+  .tile{background:var(--red);color:var(--paper);padding:30px 26px 26px;min-height:300px;display:flex;flex-direction:column;position:relative;overflow:hidden;border-radius:2px}
+  .tile .band{position:absolute;inset:0;background:url("maze.jpg") center/cover;mix-blend-mode:screen;opacity:.16}
+  .tile>*{position:relative}
+  .tile .fig{font-size:clamp(56px,7vw,92px);font-weight:700;line-height:.86;letter-spacing:-.05em}
+  .tile .t{margin-top:22px;font-size:clamp(17px,1.6vw,20px);line-height:1.32;font-weight:600;text-wrap:pretty}
+  .tile .t b{color:var(--ink)}
+  .tile .s{margin-top:auto;padding-top:28px;font-size:12px;letter-spacing:.04em;color:rgba(250,249,247,.8);line-height:1.4}
+  .facts .note{margin-top:22px;font-size:14px;color:var(--mute);max-width:70ch}
+
+  /* why */
+  .why{padding:110px 0}
+  .why .pat{background-image:url("topo.jpg")}
+  .why h2{font-size:clamp(34px,5.4vw,72px);max-width:20ch}
+  .why .words{margin-top:34px;display:grid;gap:26px;max-width:62ch}
+  .why p{font-size:clamp(19px,2.3vw,27px);line-height:1.35;font-weight:500}
+  .why p.sign{font-size:15px;color:var(--mute);font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+  .why p.big{font-size:clamp(28px,4vw,48px);font-weight:700;line-height:1.05;letter-spacing:-.015em;text-transform:uppercase}
+  .why p.big em{font-style:normal;color:var(--red)}
+
+  /* help */
+  .help{padding:110px 0;border-top:1px solid var(--line)}
+  .help h2{font-size:clamp(36px,6vw,84px)}
+  .ways{display:grid;gap:14px;margin-top:44px}
+  @media(min-width:760px){.ways{grid-template-columns:repeat(3,1fr)}}
+  .way{border:1px solid var(--line);padding:28px 24px;display:flex;flex-direction:column;gap:18px;min-height:250px;border-radius:2px}
+  .way .n{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--red);font-weight:700}
+  .way h3{font-size:clamp(26px,2.6vw,34px);font-weight:700;text-transform:uppercase;line-height:1;letter-spacing:-.015em}
+  .way p{color:rgba(250,249,247,.86);font-size:17px;line-height:1.4}
+  .way .act{margin-top:auto;display:flex;flex-wrap:wrap;gap:12px 22px;align-items:center}
+  .copied{font-size:14px;color:var(--red);font-weight:700}
+
+  /* footer */
+  footer{padding:60px 0 44px;border-top:1px solid var(--line);font-size:14px;line-height:1.55;color:var(--mute)}
+  footer .f{display:grid;gap:26px}
+  @media(min-width:760px){footer .f{grid-template-columns:1.2fr 1fr 1fr}}
+  footer b{color:var(--paper)}
+  footer a{color:var(--paper);text-decoration:none;border-bottom:1px solid var(--red)}
+  footer .help-line{font-size:17px;color:var(--paper)}
+  footer .help-line b{color:var(--red)}
+
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.show{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.grid i{transition:none}}
+</style>
+</head>
+<body>
+
+<header><div class="wrap">
+  <a class="mark" href="#top" aria-label="Equal Is Not Enough"><span>Equal</span><span>Is not</span><span>Enough</span></a>
+  <a class="btn" href="https://petitions.parliament.nz/d245fb8b-cbc1-491d-cceb-08df087aadbc" style="padding:14px 18px;font-size:13px">Sign</a>
+</div></header>
+
+<section class="hero" id="top">
+  <div class="pat"></div><div class="veil"></div>
+  <div class="wrap in">
+    <p class="k">A petition to the <b>New Zealand Parliament</b></p>
+    <h1 style="margin-top:22px">Protect our <em>tamariki.</em></h1>
+    <p class="lead">There is no life sentence for raping a child in New Zealand. The maximum is 20 years. We are asking Parliament to change that.</p>
+    <div class="cta">
+      <a class="btn" href="https://petitions.parliament.nz/d245fb8b-cbc1-491d-cceb-08df087aadbc">Sign the petition
+        <svg width="34" height="12" viewBox="0 0 150 44" aria-hidden="true"><path d="M0 22 H138 M116 4 L140 22 L116 40" stroke="currentColor" stroke-width="8" fill="none" stroke-linecap="square"/></svg></a>
+      <a class="link" href="#ask">What we are asking</a>
+    </div>
+    <p class="count"><b data-count="142445">142,445</b> of us, as at 1.42pm on 15 October 2026. Day five, we had 139.</p>
+  </div>
+</section>
+
+<section class="goal">
+  <div class="wrap in">
+    <p class="k reveal">The goal</p>
+    <h2 class="reveal" style="margin-top:18px">One million <em>of us.</em></h2>
+    <div class="grid" id="grid" aria-label="One thousand squares. Each square is one thousand signatures." role="img"></div>
+    <p class="sub reveal">Every square is 1,000 of us. <b><span data-filled>142</span> filled.</b> Send this to one person who hasn't signed.</p>
+  </div>
+</section>
+
+<section class="ask" id="ask">
+  <div class="band"></div>
+  <div class="wrap in">
+    <p class="k reveal">The petition</p>
+    <h2 class="reveal" style="margin-top:18px">Life imprisonment for raping a child, unless a judge finds that manifestly unjust. <em>Exactly as murder is today.</em></h2>
+    <div class="cols">
+      <div class="reveal">
+        <p>The petition asks for life imprisonment as the maximum for sexual violation. Our written submission asks that where the victim is under 18 it be the presumed sentence unless a judge finds that manifestly unjust, exactly as murder is today.</p>
+        <p>It also asks Parliament to raise the maximums for sexual offences against children and for abuse material, with minimum prison terms and no home detention, and to require two-thirds of a sentence to be served.</p>
+      </div>
+      <div class="req reveal">
+        <p class="k">The request, as lodged</p>
+        <p>That the House of Representatives legislate to make life imprisonment the maximum for sexual violation, raise maximums for sexual offences against children and for child sexual abuse material, set minimum prison terms with no home detention for that material, and require two-thirds to be served.</p>
+      </div>
+    </div>
+    <div style="margin-top:40px" class="reveal"><a class="btn ink" href="https://petitions.parliament.nz/d245fb8b-cbc1-491d-cceb-08df087aadbc">Sign the petition
+      <svg width="34" height="12" viewBox="0 0 150 44" aria-hidden="true"><path d="M0 22 H138 M116 4 L140 22 L116 40" stroke="#E03A2E" stroke-width="8" fill="none" stroke-linecap="square"/></svg></a></div>
+  </div>
+</section>
+
+<section class="facts">
+  <div class="pat"></div><div class="veil"></div>
+  <div class="wrap in">
+    <p class="k reveal">The facts</p>
+    <h2 class="reveal" style="margin-top:18px">This is why <em>equal is not enough.</em></h2>
+    <div class="tiles">
+      <div class="tile reveal"><div class="band"></div>
+        <div class="fig">20 years</div>
+        <p class="t">The maximum sentence for sexual violation. <b>There is no life sentence for raping a child.</b></p>
+        <p class="s">Crimes Act 1961, s 128B</p></div>
+      <div class="tile reveal"><div class="band"></div>
+        <div class="fig">637 of 1,129</div>
+        <p class="t">people convicted of a sexual offence against a child under 16 <b>were not sent to prison.</b></p>
+        <p class="s">Ministry of Justice, OIA 134743. Five years to June 2025.</p></div>
+      <div class="tile reveal"><div class="band"></div>
+        <div class="fig">400</div>
+        <p class="t"><b>got home detention.</b></p>
+        <p class="s">Ministry of Justice, OIA 134743. Five years to June 2025.</p></div>
+    </div>
+    <p class="note reveal">Every number on this page is sourced. Where a sentence is quoted, it is the court's word for the conviction, not ours.</p>
+  </div>
+</section>
+
+<section class="why">
+  <div class="pat"></div><div class="veil"></div>
+  <div class="wrap in">
+    <p class="k reveal">Why</p>
+    <div class="words">
+      <p class="reveal">This movement is bigger than us. For past, present and future, the law tells us what a life is worth.</p>
+      <p class="big reveal">If you ruin a life, <em>you deserve to do life.</em></p>
+      <p class="reveal">You are a good person. Good people do something.</p>
+      <p class="sign reveal">Moe, Equal Is Not Enough</p>
+    </div>
+  </div>
+</section>
+
+<section class="help">
+  <div class="wrap in">
+    <p class="k reveal">Three ways to help</p>
+    <h2 class="reveal" style="margin-top:18px">Do <em>something.</em></h2>
+    <div class="ways">
+      <div class="way reveal"><p class="n">01</p><h3>Sign</h3><p>Thirty seconds on the Parliament website. Every signature is counted and reported to the House.</p>
+        <div class="act"><a class="btn" href="https://petitions.parliament.nz/d245fb8b-cbc1-491d-cceb-08df087aadbc">Sign the petition</a></div></div>
+      <div class="way reveal"><p class="n">02</p><h3>Send it to one person</h3><p>Not everyone. One person who hasn't signed. That is how we got from 139 to here.</p>
+        <div class="act"><button class="btn ink" id="copy" type="button" style="border:1px solid var(--line)">Copy the link</button><span class="copied" id="copied" hidden>Copied. Now send it.</span></div></div>
+      <div class="way reveal"><p class="n">03</p><h3>Follow and share</h3><p>Every case, every number, every update, as it happens.</p>
+        <div class="act"><a class="link" href="https://www.instagram.com/equalisnotenough/">Instagram</a><a class="link" href="https://www.tiktok.com/@equalisnotenough">TikTok</a><a class="link merch" href="#">Get the merch</a></div></div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <div class="f">
+    <div><p class="help-line"><b>Safe to Talk</b>, free, any hour. Call 0800 044 334 or text 4334.</p>
+      <p style="margin-top:10px">If you or someone you know is in danger now, call 111.</p></div>
+    <div><p><b>The petition</b></p><p>Petition of Moetuturi Ormsby to the House of Representatives. Open for signatures until 15 June 2027.</p><p><a href="https://petitions.parliament.nz/d245fb8b-cbc1-491d-cceb-08df087aadbc">petitions.parliament.nz</a></p></div>
+    <div><p><b>Equal Is Not Enough</b></p><p><a href="https://www.instagram.com/equalisnotenough/">@equalisnotenough</a> on Instagram and TikTok.</p><p>Aotearoa New Zealand, 2026.</p></div>
+  </div>
+</div></footer>
+
+<script>
+(function(){
+  var g=document.getElementById('grid'); if(!g) return;
+  var filled=parseInt(document.querySelector('[data-filled]').textContent,10)||0;
+  var frag=document.createDocumentFragment();
+  for(var i=0;i<1000;i++){var s=document.createElement('i'); if(i<filled) s.setAttribute('data-on','1'); frag.appendChild(s);}
+  g.appendChild(frag);
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function fill(){var cells=g.querySelectorAll('i[data-on]'); if(reduce){cells.forEach(function(c){c.classList.add('on')});return;}
+    cells.forEach(function(c,i){setTimeout(function(){c.classList.add('on')}, Math.min(i*9, 1600));});}
+  var done=false;
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&!done){done=true;fill();io.disconnect();}})},{threshold:.2}); io.observe(g);
+    var ro=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('show');ro.unobserve(e.target);}})},{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(function(el){ro.observe(el)});
+  } else { fill(); document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('show')}); }
+  var b=document.getElementById('copy'), c=document.getElementById('copied');
+  if(b){b.addEventListener('click',function(){var url='https://equalisnotenough.nz/';
+    (navigator.clipboard?navigator.clipboard.writeText(url):Promise.reject()).then(function(){c.hidden=false;},function(){window.prompt('Copy this link',url);});});}
+})();
+</script>
+</body>
+</html>
